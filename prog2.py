@@ -18,9 +18,9 @@ list1 = [0, 0, 1, 0, 1, 0, 0, 0]
 def nextList(list0):
     nextlist = []
     for i in range(len(list0)):
-        if (i > 0 and list0[i - 1] == 1) and (i < len(list0) - 1 and list0[i + 1] == 0):
+        if (i > 0 and list0[i - 1] == 1) and ((i < len(list0) - 1 and list0[i + 1] == 0) or i == len(list0) - 1):
             nextlist.append(1)
-        elif (i > 0 and list0[i - 1] == 0) and (i < len(list0) - 1 and list0[i + 1] == 1):
+        elif ((i > 0 and list0[i - 1] == 0) or i == 0) and (i < len(list0) - 1 and list0[i + 1] == 1):
             nextlist.append(1)
         else:
             nextlist.append(0)
