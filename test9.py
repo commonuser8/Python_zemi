@@ -1,19 +1,19 @@
-# 関数の作成
+# 関数の定義
 def rectangle(a, b):
     return a * b
 
 def triangle(a, b):
-    return a * b / 2
+    return a * b / 2  # rectangle(a, b) / 2
 
 a = 5
 b = 10
 print(rectangle(a, b), triangle(a, b))
 
 
-def numprint(*args):
+def indexed_print(*args):
     i = 1
     for s in args:
         print(str(i) + ":" + s)
         i = i + 1
 
-numprint("Java", "Python", "C++")
+indexed_print("Java", "Python", "C++")
